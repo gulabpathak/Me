@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gulab Pathak | Cloud & Infrastructure Engineer Portfolio</title>
+
+<!-- 🔍 SEO Meta Tags -->
+<meta name="description" content="Welcome to Gulab Pathak's professional portfolio — showcasing 13+ years of experience in Cloud, Network Operations, and Infrastructure Engineering.">
+<meta name="keywords" content="Gulab Pathak, Cloud Engineer, Azure, AWS, DevOps, Network Operations, Infrastructure, Resume, Portfolio">
+<meta name="author" content="Gulab Pathak">
+
+<!-- 🌐 Open Graph / Social Preview -->
+<meta property="og:title" content="Gulab Pathak | Career Portfolio">
+<meta property="og:description" content="Explore Gulab Pathak’s expertise in Cloud Computing, Infrastructure, and Network Operations. Download resume and connect on LinkedIn.">
+<meta property="og:image" content="https://gulabpathak.github.io/Me/favicon.png">
+<meta property="og:url" content="https://gulabpathak.github.io/Me/">
+<meta property="og:type" content="website">
+
+<!-- 📱 Favicon -->
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+  :root {
+    --primary: #0078d7;
+    --accent: #00b4d8;
+    --text: #333;
+    --bg: #f9f9f9;
+    --white: #fff;
+    --card-bg: #fff;
+    --shadow: rgba(0, 0, 0, 0.05);
+  }
+
+  body.dark {
+    --primary: #66ccff;
+    --accent: #4fc3f7;
+    --text: #e0e0e0;
+    --bg: #121212;
+    --white: #1e1e1e;
+    --card-bg: #1e1e1e;
+    --shadow: rgba(255, 255, 255, 0.05);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 1rem;
+    position: relative;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
+  #theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--white);
+    color: var(--primary);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 3px 8px var(--shadow);
+    transition: transform 0.2s;
+  }
+
+  #theme-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  nav {
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.8rem;
+    box-shadow: 0 2px 6px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav a {
+    color: var(--primary);
+    margin: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    color: var(--accent);
+  }
+
+  section {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+
+  h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-bar {
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .skill-bar span {
+    display: block;
+    height: 10px;
+    background: var(--primary);
+    width: 0;
+    border-radius: 10px;
+    transition: width 1.5s ease-in-out;
+  }
+
+  .download {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .download a {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .download a:hover {
+    background: var(--accent);
+  }
+
+  #backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px var(--shadow);
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 2000;
+  }
+
+  #backToTop:hover {
+    background: var(--accent);
+    transform: scale(1.1);
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #eee;
+    font-size: 0.9rem;
+  }
+
+  body.dark footer {
+    background: #1e1e1e;
+  }
+
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Gulab's Career Portfolio</h1>
+  <p>A concise showcase of skills, achievements, and experience in Cloud and IT Infrastructure.</p>
+  <button id="theme-toggle" title="Toggle Dark Mode">🌙</button>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#awards">Awards</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="card">
+  <h2>About Me</h2>
+  <p>Experienced IT expert with 13+ years in infrastructure and network operations, skilled in Windows platforms, Cloud (Azure, AWS, GCP), and system administration. Passionate about optimizing performance, ensuring uptime, and delivering scalable cloud solutions.</p>
+</section>
+
+<section id="skills" class="card">
+  <h2>Core Skills</h2>
+  <ul>
+    <li><strong>Operating Systems:</strong> Windows Server, DNS, DHCP, AD, WSUS</li>
+    <div class="skill-bar"><span data-skill="95"></span></div>
+
+    <li><strong>Cloud Platforms:</strong> Azure, AWS, GCP</li>
+    <div class="skill-bar"><span data-skill="90"></span></div>
+
+    <li><strong>Monitoring & Tools:</strong> SCOM, SCCM, ServiceNow, Cisco UC Tools, VMware</li>
+    <div class="skill-bar"><span data-skill="85"></span></div>
+
+    <li><strong>Communication Tools:</strong> Skype for Business, Lync, Exchange</li>
+    <div class="skill-bar"><span data-skill="80"></span></div>
+  </ul>
+</section>
+
+<section id="experience" class="card">
+  <h2>Professional Experience</h2>
+  <ul>
+    <li><strong>Sr. Associate, Network Operations – AT&T (2016–Present)</strong><br>
+      Managed contact center operations, optimized Windows patching via WSUS, administered Azure AD, deployed compute resources on Azure, resolved complex cloud issues, and led VMware migrations.
+    </li>
+    <li><strong>Server Support Engineer – Renovision Automation (2012–2015)</strong><br>
+      Managed Skype for Business, Lync servers, Exchange 2003–2010 upgrades, and DNS/DHCP backups. Delivered endpoint security with Symantec Antivirus.
+    </li>
+    <li><strong>Customer Support Engineer – CI InfoTech (2009–2012)</strong><br>
+      Provided desktop support for clients (ACC Cement, APEDA), resolved Outlook/Lotus Notes issues, and performed hardware troubleshooting on IBM servers.
+    </li>
+  </ul>
+</section>
+
+<section id="education" class="card">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>Executive PG Certification in Cloud Computing & DevOps</strong> – IIT Roorkee / iHUB DivyaSampark (2024)</li>
+    <li><strong>B.Com (Accountancy)</strong> – Lalit Narayan Mithila University (2003)</li>
+    <li><strong>Diploma in Hardware & Networking</strong> – IIHT, Delhi</li>
+  </ul>
+</section>
+
+<section id="awards" class="card">
+  <h2>Awards & Certifications</h2>
+  <ul>
+    <li>⭐ <strong>Connection Award</strong> – AT&T (Jan 2022)</li>
+    <li>🏆 <strong>Star of the Month</strong> – AT&T (Aug 2022)</li>
+    <li>🎓 <strong>Microsoft Certified: Azure Administrator Associate</strong> – Microsoft (May 2025)</li>
+  </ul>
+</section>
+
+<section id="contact" class="card">
+  <h2>Contact</h2>
+  <p><strong>Email:</strong> <a href="mailto:gulabpathak@gmail.com">gulabpathak@gmail.com</a><br>
+     <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/gulabpathak" target="_blank">linkedin.com/in/gulabpathak</a><br>
+     <strong>Phone:</strong> +91 9953007556<br>
+     <strong>Location:</strong> Hyderabad, Telangana, India</p>
+</section>
+
+<div class="download">
+  <a href="Gulab%20Pathak-Cloud-Resume.pdf" download>📄 Download My Resume</a>
+</div>
+
+<button id="backToTop" title="Back to top">⬆️</button>
+
+<footer>
+  © 2025 Gulab Pathak | Built with ❤️ for recruiters and collaborators.
+</footer>
+
+<script>
+  // Dark Mode Toggle
+  const toggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark');
+    toggleBtn.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+  });
+
+  // Skill Bar Animation
+  const skillBars = document.querySelectorAll('.skill-bar span');
+  const options = { threshold: 0.5 };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const skill = entry.target.getAttribute('data-skill');
+        entry.target.style.width = skill + '%';
+      }
+    });
+  }, options);
+
+  skillBars.forEach(bar => observer.observe(bar));
+
+  // Smooth Scrolling Enhancement
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Back to Top Button
+  const backToTop = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      backToTop.style.display = 'block';
+      backToTop.style.opacity = '1';
+    } else {
+      backToTop.style.opacity = '0';
+      backToTop.style.display = 'none';
+    }
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
