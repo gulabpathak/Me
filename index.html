@@ -307,6 +307,219 @@
      <strong>Phone:</strong> +91 9953007556<br>
      <strong>Location:</strong> Hyderabad, Telangana, India</p>
 </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCOM Monitoring Dashboard | Gulab Pathak</title>
+
+    <!-- Fully Self-Contained Embedded Styling -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background: #f2f4f7;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        header {
+            background: #1f2937;
+            color: #fff;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin-bottom: 5px;
+            font-size: 32px;
+        }
+        header p {
+            margin-top: 0;
+            font-size: 16px;
+        }
+        .container {
+            max-width: 920px;
+            background: white;
+            margin: 40px auto;
+            padding: 35px 40px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.08);
+            border-radius: 8px;
+        }
+        h2 {
+            margin-top: 35px;
+            color: #111827;
+            font-size: 26px;
+        }
+        h3 {
+            margin-top: 25px;
+            color: #1f2937;
+            font-size: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        img {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 6px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .divider {
+            height: 2px;
+            background: #d1d5db;
+            margin: 45px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SCOM Monitoring Dashboard</h1>
+    <p>Centralized Infrastructure Health & Performance Monitoring</p>
+</header>
+
+<div class="container">
+
+    <h2>Overview</h2>
+    <p>
+        The <strong>SCOM Monitoring Dashboard</strong> is a complete enterprise-grade monitoring solution built using 
+        <strong>System Center Operations Manager (SCOM)</strong>. This project showcases my experience designing, 
+        implementing, and optimizing end-to-end monitoring for Windows servers, network devices, SQL databases, and 
+        business-critical applications.
+    </p>
+
+    <img src="Architecture-Diagram.png" alt="SCOM Architecture Diagram">
+
+    <h3>Dashboard Provides Visibility Into:</h3>
+    <ul>
+        <li>Windows Server health & resource performance</li>
+        <li>Active Directory, DNS, DHCP services</li>
+        <li>SQL Server performance, services & DB availability</li>
+        <li>IIS & Web Applications</li>
+        <li>Network devices through SNMP (switches, routers, firewalls)</li>
+        <li>Capacity, resource utilization & trend analysis</li>
+        <li>SLA & uptime compliance</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Architecture</h2>
+
+    <img src="SCOM-Infrastructure-Architecture-Workflow.png" alt="SCOM Infrastructure Architecture Diagram">
+
+    <h3>Core Architecture Components</h3>
+    <ul>
+        <li>SCOM Management Server</li>
+        <li>Operations Database & Data Warehouse</li>
+        <li>SCOM Gateway Server for DMZ monitoring</li>
+        <li>Windows/Linux SCOM Agents</li>
+        <li>SCOM Web Console for dashboards</li>
+        <li>Custom & Vendor Management Packs</li>
+        <li>SNMP Network Discovery and Monitoring</li>
+    </ul>
+
+    <p>
+        The data collection pipeline uses event logs, SNMP, performance counters, health probes, and custom scripted checks 
+        to present a unified health model across the entire infrastructure.
+    </p>
+
+    <div class="divider"></div>
+
+    <h2>Key Features</h2>
+
+    <h3>1. Real-Time Server Health Monitoring</h3>
+    <p>
+        Monitors CPU, Memory, Disk IOPS, network bandwidth, WinRM services, and system logs for proactive alerts.
+    </p>
+
+    <h3>2. Application & Service Monitoring</h3>
+    <ul>
+        <li>AD DS health (replication, FSMO role checks)</li>
+        <li>DNS/DHCP service availability</li>
+        <li>IIS Web App health including AppPool restarts</li>
+        <li>SQL Server agent, DB status, backup monitoring</li>
+    </ul>
+
+    <h3>3. Network Device Monitoring using SNMP</h3>
+
+    <img src="SCOM-SNMP-Monitoring.png" alt="SCOM SNMP Monitoring">
+
+    <p>
+        Integrated SNMP-based discovery for switches, routers, and firewalls. Network dependency monitors detect upstream 
+        outages and prevent cascading alerts.
+    </p>
+
+    <h3>4. Custom Management Packs</h3>
+    <p>
+        Developed tailored MPs for organization-specific applications, including discoveries, event rules, monitors, and 
+        PowerShell-based automated recovery tasks.
+    </p>
+
+    <h3>5. NOC-Style Dashboard</h3>
+    <ul>
+        <li>Global health state overview</li>
+        <li>Alert severity & category views</li>
+        <li>Performance & trend charts</li>
+        <li>SLA compliance heatmaps</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Technical Workflow</h2>
+
+    <img src="SCOM-Monitoring-Process.png" alt="SCOM Monitoring Process Diagram">
+
+    <h3>Project Workflow Phases</h3>
+    <ol>
+        <li><strong>Requirements & KPI Gathering:</strong> Identify critical servers, SLAs, and thresholds.</li>
+        <li><strong>SCOM Infrastructure Validation:</strong> Optimize DB, DW, MS health, RunAs accounts.</li>
+        <li><strong>Management Packs:</strong> Import baseline MPs, create custom overrides, add application MPs.</li>
+        <li><strong>Dashboard Construction:</strong> Build state, alert, performance, SLA dashboards.</li>
+        <li><strong>Automation:</strong> Implement PowerShell auto-remediation actions.</li>
+        <li><strong>Reporting:</strong> Build SLA, health, and capacity planning reports.</li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <h2>Technologies Used</h2>
+    <ul>
+        <li>System Center Operations Manager (SCOM 2016/2019/2022)</li>
+        <li>Windows Server (2012–2022)</li>
+        <li>PowerShell Automation</li>
+        <li>SQL Server (SCOM DB & DW)</li>
+        <li>SNMP v2/v3 Monitoring</li>
+        <li>Custom XML-based Management Packs</li>
+        <li>IIS Web Console</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Impact & Outcomes</h2>
+    <ul>
+        <li>Reduced alert noise by approximately <strong>30%</strong> through tuning and override optimization</li>
+        <li>Improved MTTR by <strong>25–35%</strong> via automated remediation</li>
+        <li>Enhanced visibility for <strong>150–500+ servers</strong> and network devices</li>
+        <li>Strengthened SLA compliance and transparency</li>
+        <li>Delivered an enterprise-grade NOC dashboard used by 24×7 operations teams</li>
+    </ul>
+
+</div>
+
+<footer>
+    © 2025 Gulab Pathak | SCOM Monitoring Dashboard Project | GitHub Portfolio
+</footer>
+
+</body>
+</html>
 
 <div class="download">
   <a href="Gulab%20Pathak-Cloud-Resume.pdf" download>📄 Download My Resume</a>
