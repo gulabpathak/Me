@@ -41,4 +41,239 @@ header {
 }
 header h1 {
   font-size: 2.4rem;
-  color:
+  color: var(--cyan);
+}
+header p {
+  opacity: 0.85;
+  font-size: 1.1rem;
+}
+
+/* NAVIGATION */
+nav {
+  background: var(--navy-light);
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+nav a {
+  color: var(--cyan);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  color: white;
+}
+
+/* SECTION / CARD */
+section {
+  max-width: 1000px;
+  margin: 2.5rem auto;
+  padding: 1rem;
+}
+.card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--shadow);
+  margin-bottom: 2rem;
+}
+h2 {
+  border-left: 4px solid var(--cyan);
+  padding-left: 10px;
+  color: var(--cyan);
+  margin-bottom: 1rem;
+}
+
+/* SKILL BARS */
+.skill-bar {
+  height: 10px;
+  background: #334;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.skill-bar span {
+  display: block;
+  height: 100%;
+  background: var(--cyan);
+  width: 0%;
+  transition: width 1.5s ease;
+}
+
+/* PROJECT SHOWCASE */
+.project-card {
+  background: #0f1a2e;
+  padding: 1.5rem;
+  border: 1px solid #123;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.project-card a {
+  color: var(--cyan);
+}
+
+/* CONTACT */
+a {
+  color: var(--cyan);
+}
+
+/* FOOTER */
+footer {
+  background: #06101e;
+  padding: 1.5rem;
+  text-align: center;
+  color: #88a;
+}
+
+/* BACK TO TOP */
+#backToTop {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  background: var(--cyan);
+  color: #000;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: none;
+}
+#backToTop:hover {
+  transform: scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>Gulab Pathak</h1>
+  <p>Cloud & Infrastructure Engineer | Windows | Azure | Networking | Monitoring</p>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#awards">Awards</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about" class="card">
+  <h2>About Me</h2>
+  <p>With 13+ years of experience in Cloud, Windows Infrastructure, Network Operations, and Monitoring, I specialize in designing scalable systems, optimizing performance, and implementing enterprise-grade solutions across Windows, Azure, SCOM, VMware, and hybrid cloud platforms.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="card">
+  <h2>Technical Skills</h2>
+
+  <p><strong>Operating Systems:</strong> Windows Server, DNS, DHCP, AD, WSUS</p>
+  <div class="skill-bar"><span data-skill="95"></span></div>
+
+  <p><strong>Cloud Platforms:</strong> Azure, AWS, GCP</p>
+  <div class="skill-bar"><span data-skill="90"></span></div>
+
+  <p><strong>Monitoring & Tools:</strong> SCOM, SCCM, ServiceNow, VMware</p>
+  <div class="skill-bar"><span data-skill="85"></span></div>
+
+  <p><strong>Messaging & Collaboration:</strong> Skype for Business, Lync, Exchange</p>
+  <div class="skill-bar"><span data-skill="80"></span></div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="card">
+  <h2>Professional Experience</h2>
+  <ul>
+    <li><strong>Sr. Associate – Network Operations | AT&T (2016–Present)</strong><br>
+      Azure administration, performance monitoring, SCOM dashboards, VMware migrations, and WSUS patch automation.
+    </li>
+    <li><strong>Server Support Engineer | Renovision Automation (2012–2015)</strong><br>
+      Managed Skype for Business, Exchange upgrades, DNS/DHCP service administration.
+    </li>
+    <li><strong>Customer Support Engineer | CI InfoTech (2009–2012)</strong><br>
+      Desktop & server support, end-user troubleshooting, IBM server maintenance.
+    </li>
+  </ul>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="card">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>Executive PG Certification – Cloud Computing & DevOps</strong> (IIT Roorkee, 2024)</li>
+    <li><strong>B.Com (Accountancy)</strong> – LNMU (2003)</li>
+    <li><strong>Diploma – Hardware & Networking</strong> – IIHT Delhi</li>
+  </ul>
+</section>
+
+<!-- AWARDS -->
+<section id="awards" class="card">
+  <h2>Awards & Certifications</h2>
+  <ul>
+    <li>⭐ <strong>Connection Award</strong> – AT&T (2022)</li>
+    <li>🏆 <strong>Star of the Month</strong> – AT&T (2022)</li>
+    <li>🎓 <strong>Azure Administrator Associate</strong> – Microsoft (2025)</li>
+  </ul>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="card">
+  <h2>Project Showcase</h2>
+
+  <div class="project-card">
+    <h3>SCOM Monitoring Dashboard</h3>
+    <p>A centralized monitoring solution for Windows, network devices, and CVS Healthcare infrastructure using SCOM 2019/2022.</p>
+    <a href="projects/scom-monitoring-dashboard/index.html" target="_blank">View Project →</a>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="card">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:gulabpathak@gmail.com">gulabpathak@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/gulabpathak" target="_blank">linkedin.com/in/gulabpathak</a></p>
+  <p>Phone: +91 9953007556</p>
+  <p>Location: Hyderabad, Telangana, India</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Gulab Pathak — Built with precision for recruiters and collaborators.
+</footer>
+
+<!-- JS: ANIMATE SKILL BARS & SCROLL UP BUTTON -->
+<script>
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".skill-bar span").forEach(bar => {
+    const value = bar.getAttribute("data-skill");
+    bar.style.width = value + "%";
+  });
+});
+
+const btn = document.createElement("button");
+btn.id = "backToTop";
+btn.textContent = "↑";
+document.body.appendChild(btn);
+
+window.addEventListener("scroll", () => {
+  btn.style.display = window.scrollY > 500 ? "block" : "none";
+});
+btn.onclick = () => window.scrollTo({top: 0, behavior: "smooth"});
+</script>
+
+</body>
+</html>
