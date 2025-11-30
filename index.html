@@ -1,438 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gulab Pathak | Cloud & Infrastructure Engineer</title>
 
-<title>Gulab Pathak | Cloud & Infrastructure Engineer Portfolio</title>
-
-<!-- 🔍 SEO Meta Tags -->
-<meta name="description" content="Welcome to Gulab Pathak's professional portfolio — showcasing 13+ years of experience in Cloud, Network Operations, and Infrastructure Engineering.">
-<meta name="keywords" content="Gulab Pathak, Cloud Engineer, Azure, AWS, DevOps, Network Operations, Infrastructure, Resume, Portfolio">
-<meta name="author" content="Gulab Pathak">
-
-<!-- 🌐 Open Graph / Social Preview -->
-<meta property="og:title" content="Gulab Pathak | Career Portfolio">
-<meta property="og:description" content="Explore Gulab Pathak’s expertise in Cloud Computing, Infrastructure, and Network Operations. Download resume and connect on LinkedIn.">
-<meta property="og:image" content="https://gulabpathak.github.io/Me/favicon.png">
-<meta property="og:url" content="https://gulabpathak.github.io/Me/">
-<meta property="og:type" content="website">
-
-<!-- 📱 Favicon -->
-<link rel="icon" type="image/png" href="favicon.png">
-
-<style>
-  :root {
-    --primary: #0078d7;
-    --accent: #00b4d8;
-    --text: #333;
-    --bg: #f9f9f9;
-    --white: #fff;
-    --card-bg: #fff;
-    --shadow: rgba(0, 0, 0, 0.05);
-  }
-
-  body.dark {
-    --primary: #66ccff;
-    --accent: #4fc3f7;
-    --text: #e0e0e0;
-    --bg: #121212;
-    --white: #1e1e1e;
-    --card-bg: #1e1e1e;
-    --shadow: rgba(255, 255, 255, 0.05);
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-
-  header {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: var(--white);
-    text-align: center;
-    padding: 3rem 1rem;
-    position: relative;
-  }
-
-  header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-  }
-
-  #theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: var(--white);
-    color: var(--primary);
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    box-shadow: 0 3px 8px var(--shadow);
-    transition: transform 0.2s;
-  }
-
-  #theme-toggle:hover {
-    transform: scale(1.1);
-  }
-
-  nav {
-    background: var(--blue);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0.8rem;
-    box-shadow: 0 2px 6px var(--shadow);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-
-  nav a {
-    color: var(--primary);
-    margin: 0.5rem 1rem;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-  }
-
-  nav a:hover {
-    color: var(--accent);
-  }
-
-  section {
-    max-width: 1000px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-  }
-
-  h2 {
-    color: var(--primary);
-    margin-bottom: 1rem;
-    border-left: 4px solid var(--accent);
-    padding-left: 10px;
-  }
-
-  .card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 12px var(--shadow);
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    margin-bottom: 0.5rem;
-  }
-
-  .skill-bar {
-    background: #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 1rem;
-  }
-
-  .skill-bar span {
-    display: block;
-    height: 10px;
-    background: var(--primary);
-    width: 0;
-    border-radius: 10px;
-    transition: width 1.5s ease-in-out;
-  }
-
-  .download {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-  }
-
-  .download a {
-    background: var(--primary);
-    color: var(--white);
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-  }
-
-  .download a:hover {
-    background: var(--accent);
-  }
-
-  #backToTop {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: var(--primary);
-    color: var(--white);
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 10px var(--shadow);
-    display: none;
-    transition: all 0.3s ease;
-    z-index: 2000;
-  }
-
-  #backToTop:hover {
-    background: var(--accent);
-    transform: scale(1.1);
-  }
-
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #eee;
-    font-size: 0.9rem;
-  }
-
-  body.dark footer {
-    background: #1e1e1e;
-  }
-
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 1.6rem;
+  <!-- Professional Color Palette & Modern UI -->
+  <style>
+    :root {
+      --primary: #0a66c2;
+      --secondary: #00a3ff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --bg: #f3f6fa;
+      --card-bg: #ffffff;
+      --radius: 14px;
+      --shadow: 0 4px 14px rgba(0,0,0,0.08);
     }
-  }
-</style>
-</head>
-<body>
 
-<header>
-  <h1>Welcome to Gulab's Career Portfolio</h1>
-  <p>A concise showcase of skills, achievements, and experience in Cloud and IT Infrastructure.</p>
-  <button id="theme-toggle" title="Toggle Dark Mode">🌙</button>
-</header>
+    body.dark {
+      --primary: #4faaff;
+      --secondary: #7cd3ff;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --bg: #111827;
+      --card-bg: #1f2937;
+      --shadow: 0 4px 14px rgba(255,255,255,0.05);
+    }
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#education">Education</a>
-  <a href="#awards">Awards</a>
-  <a href="#contact">Contact</a>
-  <a href="#contact">Project Showcase</a>
-</nav>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
 
-<section id="about" class="card">
-  <h2>About Me</h2>
-  <p>Experienced IT expert with 13+ years in infrastructure and network operations, skilled in Windows platforms, Cloud (Azure, AWS, GCP), and system administration. Passionate about optimizing performance, ensuring uptime, and delivering scalable cloud solutions.</p>
-</section>
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-<section id="skills" class="card">
-  <h2>Core Skills</h2>
-  <ul>
-    <li><strong>Operating Systems:</strong> Windows Server, DNS, DHCP, AD, WSUS</li>
-    <div class="skill-bar"><span data-skill="95"></span></div>
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 4rem 1rem;
+      text-align: center;
+      position: relative;
+    }
 
-    <li><strong>Cloud Platforms:</strong> Azure, AWS, GCP</li>
-    <div class="skill-bar"><span data-skill="90"></span></div>
+    header h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+    }
 
-    <li><strong>Monitoring & Tools:</strong> SCOM, SCCM, ServiceNow, Cisco UC Tools, VMware</li>
-    <div class="skill-bar"><span data-skill="85"></span></div>
+    header p {
+      font-size: 1.15rem;
+      opacity: 0.95;
+      margin-top: 0.5rem;
+    }
 
-    <li><strong>Communication Tools:</strong> Skype for Business, Lync, Exchange</li>
-    <div class="skill-bar"><span data-skill="80"></span></div>
-  </ul>
-</section>
+    #theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      color: var(--primary);
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      font-size: 1.3rem;
+      box-shadow: var(--shadow);
+    }
 
-<section id="experience" class="card">
-  <h2>Professional Experience</h2>
-  <ul>
-    <li><strong>Sr. Associate, Network Operations – AT&T (2016–Present)</strong><br>
-      Managed contact center operations, optimized Windows patching via WSUS, administered Azure AD, deployed compute resources on Azure, resolved complex cloud issues, and led VMware migrations.
-    </li>
-    <li><strong>Server Support Engineer – Renovision Automation (2012–2015)</strong><br>
-      Managed Skype for Business, Lync servers, Exchange 2003–2010 upgrades, and DNS/DHCP backups. Delivered endpoint security with Symantec Antivirus.
-    </li>
-    <li><strong>Customer Support Engineer – CI InfoTech (2009–2012)</strong><br>
-      Provided desktop support for clients (ACC Cement, APEDA), resolved Outlook/Lotus Notes issues, and performed hardware troubleshooting on IBM servers.
-    </li>
-  </ul>
-</section>
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem;
+      background: var(--card-bg);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-<section id="education" class="card">
-  <h2>Education</h2>
-  <ul>
-    <li><strong>Executive PG Certification in Cloud Computing & DevOps</strong> – IIT Roorkee / iHUB DivyaSampark (2024)</li>
-    <li><strong>B.Com (Accountancy)</strong> – Lalit Narayan Mithila University (2003)</li>
-    <li><strong>Diploma in Hardware & Networking</strong> – IIHT, Delhi</li>
-  </ul>
-</section>
+    nav a {
+      color: var(--primary);
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
 
-<section id="awards" class="card">
-  <h2>Awards & Certifications</h2>
-  <ul>
-    <li>⭐ <strong>Connection Award</strong> – AT&T (Jan 2022)</li>
-    <li>🏆 <strong>Star of the Month</strong> – AT&T (Aug 2022)</li>
-    <li>🎓 <strong>Microsoft Certified: Azure Administrator Associate</strong> – Microsoft (May 2025)</li>
-  </ul>
-</section>
-<section class="mb-10">
-      <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Project Showcase</h2>
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SCOM Monitoring Dashboard | Gulab Pathak</title>
+    section {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            background: #f2f4f7;
-            color: #1a1a1a;
-            line-height: 1.6;
-        }
-        header {
-            background: #1f2937;
-            color: #fff;
-            padding: 35px 25px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        header h1 {
-            margin-bottom: 5px;
-            font-size: 32px;
-        }
-        header p {
-            margin-top: 0;
-            font-size: 16px;
-        }
-        .container {
-            max-width: 920px;
-            background: white;
-            margin: 40px auto;
-            padding: 35px 40px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.08);
-            border-radius: 8px;
-        }
-        h2 {
-            margin-top: 35px;
-            color: #111827;
-            font-size: 26px;
-        }
-        h3 {
-            margin-top: 25px;
-            color: #1f2937;
-            font-size: 20px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        img {
-            width: 100%;
-            max-width: 900px;
-            border-radius: 6px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-        .divider {
-            height: 2px;
-            background: #d1d5db;
-            margin: 45px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #555;
-            font-size: 14px;
-        }
-    </style>
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      border-left: 5px solid var(--secondary);
+      padding-left: 12px;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .skill-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .skill-bar {
+      width: 100%;
+      background: #d1d5db;
+      height: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .skill-bar span {
+      display: block;
+      height: 100%;
+      background: var(--primary);
+      width: 0;
+      transition: width 1.5s ease;
+    }
+
+    .download a {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: inline-block;
+      box-shadow: var(--shadow);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+  </style>
 </head>
 
 <body>
+  <header>
+    <h1>Gulab Pathak</h1>
+    <p>Cloud & Infrastructure Engineer • Azure | Networking | Monitoring | DevOps</p>
+    <button id="theme-toggle">🌙</button>
+  </header>
 
-<header>
-    <h1>SCOM Monitoring Dashboard</h1>
-    <p>Centralized Infrastructure Health & Performance Monitoring</p>
-</header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#awards">Awards</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<div class="container">
-
-    <h2>Overview</h2>
+  <section id="about" class="card">
+    <h2>About Me</h2>
     <p>
-        The <strong>SCOM Monitoring Dashboard</strong> is an enterprise-grade monitoring solution designed using 
-        <strong>System Center Operations Manager (SCOM)</strong>. It consolidates monitoring for Windows servers, 
-        network devices, applications, and databases into a single operational dashboard.
+      Cloud & Infrastructure Engineer with 13+ years of experience managing enterprise environments across Azure, Windows Server, VMware, Networking, and Monitoring platforms. Skilled in delivering scalable architectures, troubleshooting complex issues, and ensuring high availability.
     </p>
+  </section>
 
-    <!-- SCOM ARCHITECTURE DIAGRAM -->
-    <img src="scom-architecture.png" alt="SCOM Architecture Diagram">
+  <section id="skills" class="card">
+    <h2>Core Skills</h2>
 
-    <h3>Dashboard Provides Visibility Into:</h3>
+    <div class="skill-item">
+      <strong>Cloud Platforms: Azure, AWS, GCP</strong>
+      <div class="skill-bar"><span style="width: 92%"></span></div>
+    </div>
+
+    <div class="skill-item">
+      <strong>Infra & OS: Windows Server, AD, DNS, DHCP, WSUS</strong>
+      <div class="skill-bar"><span style="width: 95%"></span></div>
+    </div>
+
+    <div class="skill-item">
+      <strong>Monitoring: SCOM, Log Analytics, VMware Tools</strong>
+      <div class="skill-bar"><span style="width: 88%"></span></div>
+    </div>
+
+    <div class="skill-item">
+      <strong>Networking: VNets, NSG, VPN, Load Balancers</strong>
+      <div class="skill-bar"><span style="width: 85%"></span></div>
+    </div>
+  </section>
+
+  <section id="experience" class="card">
+    <h2>Professional Experience</h2>
     <ul>
-        <li>Windows Server health and performance</li>
-        <li>Active Directory, DNS, DHCP services</li>
-        <li>SQL Server health and resource utilization</li>
-        <li>IIS Web Applications and services</li>
-        <li>Network devices via SNMP</li>
-        <li>Capacity and performance forecasting</li>
-        <li>SLA and uptime dashboards</li>
+      <li><strong>Sr. Associate, Network Operations — AT&T (2016–Present)</strong><br />
+        Managed Azure environments, optimized patching, resolved complex infra issues, led VMware migrations.
+      </li>
+      <br />
+      <li><strong>Server Support Engineer — Renovision Automation (2012–2015)</strong><br />
+        Administered Exchange, Lync, AD, DNS, and endpoint security.
+      </li>
+      <br />
+      <li><strong>Customer Support Engineer — CI Infotech (2009–2012)</strong><br />
+        Delivered desktop/server support for enterprise clients.
+      </li>
     </ul>
+  </section>
 
-    <div class="divider"></div>
+  <section id="projects" class="card">
+    <h2>Project Showcase</h2>
 
-    <h2>Infrastructure Architecture</h2>
+    <h3>SCOM Monitoring Dashboard</h3>
+    <p>Enterprise-wide monitoring dashboard for Windows Servers, SQL, IIS, and network devices.</p>
+    <img src="scom-architecture.png" alt="SCOM Architecture" style="width:100%; border-radius:10px;" />
+  </section>
 
-    <!-- INFRASTRUCTURE ARCHITECTURE -->
-    <img src="scom-infrastructure.png" alt
+  <section id="education" class="card">
+    <h2>Education</h2>
+    <ul>
+      <li>Executive PG Program in Cloud Computing & DevOps — IIT Roorkee</li>
+      <li>B.Com — LNM University</li>
+      <li>Diploma in Hardware & Networking — IIHT Delhi</li>
+    </ul>
+  </section>
 
+  <section id="awards" class="card">
+    <h2>Awards & Certifications</h2>
+    <ul>
+      <li>⭐ Connection Award — AT&T</li>
+      <li>🏆 Star of the Month — AT&T</li>
+      <li>🎓 Microsoft Certified: Azure Administrator (2025)</li>
+    </ul>
+  </section>
 
-<section id="contact" class="card">
-  <h2>Contact</h2>
-  <p><strong>Email:</strong> <a href="mailto:gulabpathak@gmail.com">gulabpathak@gmail.com</a><br>
-     <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/gulabpathak" target="_blank">linkedin.com/in/gulabpathak</a><br>
-     <strong>Phone:</strong> +91 9953007556<br>
-     <strong>Location:</strong> Hyderabad, Telangana, India</p>
+  <section id="contact" class="card">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> gulabpathak@gmail.com</p>
+    <p><strong>LinkedIn:</strong> linkedin.com/in/gulabpathak</p>
+    <p><strong>Phone:</strong> +91 9953007556</p>
+    <p><strong>Location:</strong> Hyderabad, India</p>
+  </section>
 
-
-   <section>
-      <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Quote</h2>
-      <b class="italic text-lg" style='color:blue'>"In the cloud, the only limit is your imagination." – Sheryl Sandberg</b>
-    </section>
-
-  </main>
-
-  <footer class="bg-gray-200 text-center py-4 text-sm">
-    &copy; 2025 Gulab Pathak — Built with ❤️ for recruiters and collaborators. ☁️
+  <footer>
+    © 2025 Gulab Pathak — Professional Cloud & Infra Portfolio
   </footer>
-
 </body>
-</ht
-
-
-
+</html>
